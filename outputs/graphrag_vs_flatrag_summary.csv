@@ -1,0 +1,11 @@
+metric,mean
+flat_comprehensiveness,1.6
+graph_comprehensiveness,2.68
+flat_faithfulness,1.68
+graph_faithfulness,3.2
+flat_multi_hop_reasoning,1.76
+graph_multi_hop_reasoning,2.76
+flat_latency_s,4.7706
+graph_latency_s,4.161
+flat_total_tokens,766.92
+graph_total_tokens,961.88

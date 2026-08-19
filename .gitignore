@@ -15,15 +15,23 @@ __pycache__/
 # Virtual environments
 venv/
 .venv/
+.venv311/
 env/
 
 # Large Datasets and data dumps (do not commit 300MB data dumps)
 *.csv
 golden_dataset.csv
+!data/graphrag_golden_50_first5000.csv
+!data/graphrag_golden_50_first5000_detailed.csv
 !reports/*.csv
+!outputs/*.csv
 *.jsonl
 *.parquet
 *.pq
+outputs/*.index
+outputs/*.log
+outputs/*checkpoint.csv
+outputs/eval_parts/
 
 # OS files
 .DS_Store

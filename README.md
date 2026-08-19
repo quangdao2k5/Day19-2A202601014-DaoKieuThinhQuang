@@ -51,8 +51,8 @@ Xem **[RUBRIC.md](RUBRIC.md)** để biết tiêu chí đánh giá và thang đi
 | **Neo4j AuraDB** (hoặc Neo4j 5.x) | ✅ Có | Lưu trữ Knowledge Graph & Cypher traversal |
 | **Python 3.10+ / Colab** | ✅ Có | Môi trường thực thi Notebook |
 | `HF_TOKEN` | ✅ Có | Stream dataset từ Hugging Face (`HackerNoon`) |
-| `GROQ_API_KEY` | ✅ Có | Coreference, NER+RE Extraction, Seed Extraction, Generator |
-| `OPENAI_API_KEY` | ⚠️ Có thể thay thế | LLM-as-a-Judge (có thể cấu hình dùng Groq hoặc OpenAI) |
+| `GROQ_API_KEY` hoặc `OPENAI_API_KEY` | ✅ Một trong hai | Coreference, NER+RE Extraction, Seed Extraction, Generator |
+| `OPENAI_API_KEY` | ⚠️ Tùy chọn | Cần khi chọn OpenAI cho Generator/Judge |
 
 ### Cấu hình Secrets (Colab Secrets hoặc `.env`)
 
@@ -64,12 +64,16 @@ NEO4J_USER=neo4j
 NEO4J_PASSWORD=<your-password>
 NEO4J_DATABASE=neo4j
 
-GROQ_API_KEY=gsk_...
-GROQ_MODEL=llama-3.3-70b-versatile
-
-JUDGE_PROVIDER=openai               # 'openai' hoặc 'groq'
-JUDGE_MODEL=gpt-4o-mini             # hoặc llama-3.3-70b-versatile
+LLM_PROVIDER=openai              # `openai` hoặc `groq`
 OPENAI_API_KEY=sk-...
+OPENAI_MODEL=gpt-4.1-mini
+
+# Chỉ cần khi LLM_PROVIDER=groq hoặc muốn dùng Groq làm judge.
+GROQ_API_KEY=gsk_...
+GROQ_MODEL=openai/gpt-oss-20b
+
+JUDGE_PROVIDER=openai
+JUDGE_MODEL=gpt-4.1-mini
 
 HF_TOKEN=hf_...                     # Hugging Face User Access Token
 ```
@@ -88,7 +92,10 @@ HF_TOKEN=hf_...                     # Hugging Face User Access Token
 
 ### Cách 2: Chạy Local Notebook
 ```bash
-# 1. Cài đặt dependencies
+# 1. Tạo virtual environment và cài dependencies
+python3.11 -m venv .venv311
+source .venv311/bin/activate
+python -m pip install --upgrade pip
 pip install -r requirements.txt
 
 # 2. Pre-download embedding model
@@ -97,8 +104,8 @@ python -c "from sentence_transformers import SentenceTransformer; SentenceTransf
 # 3. Tạo file .env và điền API keys
 cp .env.example .env
 
-# 4. Khởi chạy Jupyter Lab / Notebook
-jupyter lab Day19_GraphRAG_vs_FlatRAG_Production_Lab_Guide.ipynb
+# 4. Mở Day19_GraphRAG_vs_FlatRAG_Production_Lab_Guide.ipynb bằng VS Code
+# và chọn kernel .venv311 (không cần chạy jupyter lab)
 ```
 
 ---
