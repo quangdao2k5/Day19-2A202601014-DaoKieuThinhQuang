@@ -1,1 +1,90 @@
 type,left,right,similarity,decision
+Company,OpenAI,Microsoft,0.3410862982273102,REJECT_THRESHOLD
+Company,OpenAI,Nvidia,0.3402438163757324,REJECT_THRESHOLD
+Company,OpenAI,Amazon,0.3295203447341919,REJECT_THRESHOLD
+Company,OpenAI,Intel,0.31113648414611816,REJECT_THRESHOLD
+Company,The Associated Press,White House,0.31779587268829346,REJECT_THRESHOLD
+Company,The Associated Press,Google,0.27735745906829834,REJECT_THRESHOLD
+Company,The Associated Press,Microsoft,0.2747081220149994,REJECT_THRESHOLD
+Company,The Associated Press,Dell Technologies Inc.,0.2640193700790405,REJECT_THRESHOLD
+Company,Aqara,Amazon,0.28315943479537964,REJECT_THRESHOLD
+Company,Aqara,Snowflake,0.2593417167663574,REJECT_THRESHOLD
+Company,Aqara,Microsoft,0.25419726967811584,REJECT_THRESHOLD
+Company,Samsung,Salesforce,0.509515643119812,REJECT_THRESHOLD
+Company,Samsung,AWS,0.4933272898197174,REJECT_THRESHOLD
+Company,Samsung,Amazon,0.4838147759437561,REJECT_THRESHOLD
+Company,Samsung,Intel,0.4505923390388489,REJECT_THRESHOLD
+Company,Snowflake,Meta,0.46959003806114197,REJECT_THRESHOLD
+Company,Snowflake,White House,0.29687997698783875,REJECT_THRESHOLD
+Company,Snowflake,Adobe,0.23799824714660645,REJECT_THRESHOLD
+Company,Dell Technologies Inc.,Advanced Micro Devices Inc,0.6146199703216553,REJECT_THRESHOLD
+Company,Dell Technologies Inc.,Hewlett Packard Enterprise,0.5584795475006104,REJECT_THRESHOLD
+Company,Dell Technologies Inc.,Intel,0.4813985824584961,REJECT_THRESHOLD
+Company,Dell Technologies Inc.,IBM,0.464798241853714,REJECT_THRESHOLD
+Company,Amazon,Amazon Web Services,0.6469887495040894,REJECT_THRESHOLD
+Company,Amazon,AWS,0.5531103014945984,REJECT_THRESHOLD
+Company,Amazon,Salesforce,0.5378556251525879,REJECT_THRESHOLD
+Company,AWS,Amazon Web Services,0.6605320572853088,REJECT_THRESHOLD
+Company,AWS,Salesforce,0.5505300164222717,REJECT_THRESHOLD
+Company,AWS,Google Cloud,0.519516110420227,REJECT_THRESHOLD
+Company,Google Cloud,Google,0.5455012321472168,REJECT_THRESHOLD
+Company,Google Cloud,Amazon Web Services,0.4882829189300537,REJECT_THRESHOLD
+Company,Google Cloud,Salesforce,0.45393118262290955,REJECT_THRESHOLD
+Company,IBM,Hewlett Packard Enterprise,0.5633184313774109,REJECT_THRESHOLD
+Company,IBM,Microsoft,0.554221510887146,REJECT_THRESHOLD
+Company,IBM,Intel,0.5354227423667908,REJECT_THRESHOLD
+Company,Microsoft,Salesforce,0.598405122756958,REJECT_THRESHOLD
+Company,Microsoft,Adobe,0.5452353954315186,REJECT_THRESHOLD
+Company,Microsoft,Intel,0.4967982769012451,REJECT_THRESHOLD
+Company,Amazon Web Services,Salesforce,0.5196887850761414,REJECT_THRESHOLD
+Company,Advanced Micro Devices Inc,Intel,0.4965912103652954,REJECT_THRESHOLD
+Company,Advanced Micro Devices Inc,Hewlett Packard Enterprise,0.4424697160720825,REJECT_THRESHOLD
+Company,White House,Salesforce,0.4046143889427185,REJECT_THRESHOLD
+Company,Adobe,Salesforce,0.4087679386138916,REJECT_THRESHOLD
+Company,Adobe,Intel,0.36448806524276733,REJECT_THRESHOLD
+Company,AMD,Intel,0.5434036254882812,REJECT_THRESHOLD
+Company,AMD,Nvidia,0.4729636013507843,REJECT_THRESHOLD
+Company,AMD,Hewlett Packard Enterprise,0.40556320548057556,REJECT_THRESHOLD
+Company,Google,Meta,0.38564908504486084,REJECT_THRESHOLD
+Company,Nvidia,Intel,0.3943331837654114,REJECT_THRESHOLD
+Company,H2O.ai,Intel,0.4239097833633423,REJECT_THRESHOLD
+Company,H2O.ai,Hewlett Packard Enterprise,0.3069731593132019,REJECT_THRESHOLD
+Technology,open-source language model,AI models marketplace,0.3904021084308624,REJECT_THRESHOLD
+Technology,open-source language model,artificial intelligence (AI) services,0.25428611040115356,REJECT_THRESHOLD
+Technology,open-source language model,managing artificial intelligence,0.23978742957115173,REJECT_THRESHOLD
+Technology,open-source language model,Code Llama,0.19298890233039856,REJECT_THRESHOLD
+Technology,cloud-related services,cloud services,0.8821146488189697,REJECT_THRESHOLD
+Technology,cloud-related services,big data system and cloud platform,0.552253007888794,REJECT_THRESHOLD
+Technology,cloud-related services,deploy and manage edge computing applications and infrastructure,0.5062626600265503,REJECT_THRESHOLD
+Technology,cloud-related services,artificial intelligence (AI) services,0.5046688318252563,REJECT_THRESHOLD
+Technology,Microsoft Azure,cloud services,0.5313946604728699,REJECT_THRESHOLD
+Technology,Microsoft Azure,Manufacturing Data Cloud,0.3919268548488617,REJECT_THRESHOLD
+Technology,Microsoft Azure,Dell NativeEdge,0.3330269753932953,REJECT_THRESHOLD
+Technology,AI models marketplace,artificial intelligence (AI) services,0.614869236946106,REJECT_THRESHOLD
+Technology,AI models marketplace,managing artificial intelligence,0.5324554443359375,REJECT_THRESHOLD
+Technology,AI models marketplace,H2O AI Cloud,0.47199904918670654,REJECT_THRESHOLD
+Technology,Cohere technology,chip-stacking tech,0.28761398792266846,REJECT_THRESHOLD
+Technology,Cohere technology,H2O AI Cloud,0.2818200886249542,REJECT_THRESHOLD
+Technology,Cohere technology,Manufacturing Data Cloud,0.2248920500278473,REJECT_THRESHOLD
+Technology,Cohere technology,integrated networking and security solutions,0.2131344974040985,REJECT_THRESHOLD
+Technology,big data system and cloud platform,cloud services,0.6176702976226807,REJECT_THRESHOLD
+Technology,big data system and cloud platform,Manufacturing Data Cloud,0.5100015997886658,REJECT_THRESHOLD
+Technology,big data system and cloud platform,H2O AI Cloud,0.36547455191612244,REJECT_THRESHOLD
+Technology,cloud services,artificial intelligence (AI) services,0.555922269821167,REJECT_THRESHOLD
+Technology,managing artificial intelligence,artificial intelligence (AI) services,0.6110259294509888,REJECT_THRESHOLD
+Technology,managing artificial intelligence,H2O AI Cloud,0.3857561945915222,REJECT_THRESHOLD
+Technology,managing artificial intelligence,deploy and manage edge computing applications and infrastructure,0.30640318989753723,REJECT_THRESHOLD
+Technology,Llama 2,Code Llama,0.783534049987793,REJECT_THRESHOLD
+Technology,Llama 2,Falcon LLM,0.470905601978302,REJECT_THRESHOLD
+Technology,Llama 2,Claude 2,0.2480434775352478,REJECT_THRESHOLD
+Technology,Code Llama,Falcon LLM,0.45686620473861694,REJECT_THRESHOLD
+Technology,Falcon LLM,Dell NativeEdge,0.23704244196414948,REJECT_THRESHOLD
+Technology,Falcon LLM,RLHF,0.20728512108325958,REJECT_THRESHOLD
+Technology,Claude 2,H2O AI Cloud,0.18526305258274078,REJECT_THRESHOLD
+Technology,Claude 2,RLHF,0.18010178208351135,REJECT_THRESHOLD
+Technology,adapter tuning,chip-stacking tech,0.18824715912342072,REJECT_THRESHOLD
+Technology,adapter tuning,Dell NativeEdge,0.13326971232891083,REJECT_THRESHOLD
+Technology,chip-stacking tech,Dell NativeEdge,0.33340391516685486,REJECT_THRESHOLD
+Technology,chip-stacking tech,integrated networking and security solutions,0.25319555401802063,REJECT_THRESHOLD
+Technology,Dell NativeEdge,deploy and manage edge computing applications and infrastructure,0.2560920715332031,REJECT_THRESHOLD
+Technology,integrated networking and security solutions,deploy and manage edge computing applications and infrastructure,0.36390572786331177,REJECT_THRESHOLD

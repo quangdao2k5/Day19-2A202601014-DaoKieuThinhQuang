@@ -14,7 +14,7 @@ Pipeline dùng phân giải đại từ theo hướng *conservative*: chỉ thay
 
 ### 2. Entity Resolution Threshold và Lexical Guard
 
-Ngưỡng cosine của entity matching là `0.90`; chỉ gộp khi type tương thích và lexical guard xác nhận token đặc trưng. Audit lần chạy này không có cặp nào vượt ngưỡng rồi bị reject (`outputs/entity_resolution_audit.csv` chỉ có header), vì graph nhỏ 39 cạnh sau allowlist. Tuy vậy guard vẫn cần thiết: `OpenAI` và `OpenAI’s app store` có embedding gần nhau nhưng không được gộp vì một bên là `Company`, bên kia là khái niệm/sự kiện. Không dùng guard sẽ làm query về marketplace bị quy về node công ty, làm sai quan hệ `PLANNED_MARKETPLACE`.
+Ngưỡng cosine của entity matching là `0.90`; chỉ gộp khi type tương thích và lexical guard xác nhận token đặc trưng. Audit lần chạy có 89 ANN candidate rows: cặp gần nhất `cloud-related services`/`cloud services` có cosine 0.882 và bị `REJECT_THRESHOLD`, nên không bị merge khi evidence chưa đủ mạnh. Không dùng threshold/guard sẽ làm các concept dịch vụ gần nhau bị gộp sai, gây nhiễu quan hệ truy vấn.
 
 ### 3. Đồ thị và Super-node Mitigation
 
@@ -24,7 +24,7 @@ Ngưỡng cosine của entity matching là `0.90`; chỉ gộp khi type tương 
 | 2 | big data system and cloud platform | Technology | 5 |
 | 3 | OpenAI | Company | 4 |
 
-Số liệu lấy từ `outputs/top_degree_entities.csv`. Khi degree vượt ngưỡng, traversal lấy tối đa 50 cạnh mới nhất theo `published_date`. Cách này giữ context ngắn, ưu tiên tin mới và tránh một node phổ biến làm lấn át mọi evidence. Rủi ro: câu hỏi lịch sử có thể mất cạnh cũ; hệ production cần query theo khoảng thời gian hoặc tăng cap có điều kiện.
+Số liệu lấy từ `outputs/top_degree_entities.csv`. Khi degree vượt ngưỡng, traversal lấy tối đa 50 cạnh mới nhất theo `published_date`. Graph sample có degree cao nhất 7 nên nhánh cap chưa kích hoạt trên data này; hàm policy vẫn có mặt để áp dụng khi scale. Cách này giữ context ngắn, ưu tiên tin mới và tránh một node phổ biến làm lấn át mọi evidence. Rủi ro: câu hỏi lịch sử có thể mất cạnh cũ; hệ production cần query theo khoảng thời gian hoặc tăng cap có điều kiện.
 
 ### 4. So sánh thực nghiệm
 
